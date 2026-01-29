@@ -1,3 +1,6 @@
+# Custom project-wide
+./tmp
+
 # Logs
 logs
 *.log
