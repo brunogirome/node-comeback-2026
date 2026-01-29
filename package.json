@@ -13,6 +13,7 @@
   "packageManager": "pnpm@10.28.1",
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^25.1.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
@@ -22,6 +23,8 @@
     "typescript-eslint": "^8.54.0"
   },
   "dependencies": {
-    "fastify": "^5.7.2"
+    "better-sqlite3": "^12.6.2",
+    "fastify": "^5.7.2",
+    "knex": "^3.1.0"
   }
 }
