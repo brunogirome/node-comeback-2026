@@ -1,9 +1,4 @@
-import Knex from 'knex';
+import knexSetup from 'knex';
+import config from '../knexfile.js';
 
-export const knex = Knex({
-  client: 'better-sqlite3',
-  connection: {
-    filename: './tmp/app.db',
-  },
-  useNullAsDefault: true,
-});
+export const knex = knexSetup(config);
