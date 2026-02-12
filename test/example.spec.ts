@@ -11,7 +11,7 @@ afterAll(async () => {
   await app.close();
 });
 
-test('example test', async () => {
+test('user can create a new transaction', async () => {
   await request(app.server)
     .post('/transactions')
     .send({ title: 'Test Transaction', amount: 113, type: 'credit' })
