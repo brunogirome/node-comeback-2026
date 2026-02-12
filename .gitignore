@@ -1,5 +1,5 @@
 # Custom project-wide
-db/app.db
+db/*.db
 
 # Logs
 logs
