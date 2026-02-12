@@ -1,5 +1,6 @@
 import type { Knex } from 'knex';
-import { env } from './src/env/index.js';
+// @ts-expect-error - Vitest doesn't support ESM yet, so we need to ignore this error
+import { env } from './src/env/index.ts';
 
 const config: Knex.Config = {
   client: 'better-sqlite3',

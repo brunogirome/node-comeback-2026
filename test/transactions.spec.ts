@@ -1,6 +1,7 @@
 import request from 'supertest';
-import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 
+import { execSync } from 'node:child_process';
 import { app } from '../src/app.js';
 
 describe('Transactions routes', () => {
@@ -10,6 +11,11 @@ describe('Transactions routes', () => {
 
   afterAll(async () => {
     await app.close();
+  });
+
+  beforeEach(() => {
+    execSync('pnpm migrate:rollback --all');
+    execSync('pnpm migrate:latest');
   });
 
   it('should be able to create a new transaction', async () => {
