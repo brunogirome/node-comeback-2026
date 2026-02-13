@@ -11,6 +11,7 @@ const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('production'),
   DATABASE_CLIENT: z.enum(['better-sqlite3', 'pg']),
   DATABASE_URL: z.string().nonempty('DATABASE_URL is required'),
+  HOST: z.string().default('localhost'),
   PORT: z.coerce.number().default(3333),
 });
 
