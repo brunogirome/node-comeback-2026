@@ -13,7 +13,8 @@
     "migrate:status": "knex migrate:status --knexfile knexfile.ts",
     "seed:make": "knex seed:make --knexfile knexfile.ts -x ts",
     "seed:run": "knex seed:run --knexfile knexfile.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,7 @@
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.8.1",
     "supertest": "^7.2.2",
+    "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0",

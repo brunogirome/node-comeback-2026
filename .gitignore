@@ -1,5 +1,6 @@
 # Custom project-wide
 db/*.db
+build/*
 
 # Logs
 logs
