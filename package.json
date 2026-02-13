@@ -11,7 +11,7 @@
     "dev": "tsx watch src/server.ts",
     "knex": "node --import tsx --no-warnings knexfile.ts",
     "migrate:make": "knex migrate:make --knexfile knexfile.ts -x ts",
-    "migrate:latest": "knex migrate:latest --knexfile knexfile.ts",
+    "migrate:latest": "node --import tsx --no-warnings ./node_modules/.bin/knex migrate:latest --knexfile knexfile.ts",
     "migrate:rollback": "knex migrate:rollback --knexfile knexfile.ts",
     "migrate:status": "knex migrate:status --knexfile knexfile.ts",
     "seed:make": "knex seed:make --knexfile knexfile.ts -x ts",
