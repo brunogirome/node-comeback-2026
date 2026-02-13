@@ -3,7 +3,7 @@ import type { Knex } from 'knex';
 import { env } from './src/env/index.ts';
 
 const config: Knex.Config = {
-  client: 'better-sqlite3',
+  client: env.DATABASE_CLIENT,
   connection:
     env.DATABASE_CLIENT === 'better-sqlite3'
       ? { filename: env.DATABASE_URL }
